@@ -16,6 +16,16 @@ window.addEventListener('load', () => {
   });
 });
 
+document.getElementById('signup-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('signup-email').value = '';
+  document.getElementById('signup-modal').hidden = false;
+});
+
+document.getElementById('modal-close').addEventListener('click', function() {
+  document.getElementById('signup-modal').hidden = true;
+});
+
 window.addEventListener('scroll', () => {
   const scrolled = window.scrollY;
   document.querySelectorAll('img').forEach(img => {

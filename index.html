@@ -41,10 +41,17 @@
 <div class="container section signup-section">
   <h2>Stay in the loop</h2>
   <p>Be the first to know when Monologs launches.</p>
-  <form class="signup-form" onsubmit="return false;">
-    <input type="email" class="signup-input" placeholder="your@email.com" required>
+  <form class="signup-form" id="signup-form">
+    <input type="email" class="signup-input" id="signup-email" placeholder="your@email.com" required>
     <button type="submit" class="btn signup-btn">Sign up</button>
   </form>
+</div>
+
+<div id="signup-modal" class="modal-overlay" hidden>
+  <div class="modal-box">
+    <p>Thank you for subscribing. Stay tuned!</p>
+    <button class="btn" id="modal-close">Close</button>
+  </div>
 </div>
 
 <div class="footer">© 2026 Monologs</div>
