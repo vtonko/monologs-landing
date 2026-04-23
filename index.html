@@ -16,9 +16,13 @@
     <a href="#features">Features</a>
     <a href="#how-it-works">Experience</a>
   </nav>
-  <form class="signup-form" id="signup-form">
-    <input type="email" class="signup-input" id="signup-email" placeholder="your@email.com" required>
+  <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+  <form class="signup-form" id="signup-form" action="https://api.staticforms.dev/submit" method="POST"
+    target="dummyframe">
+    <input type="hidden" name="apiKey" value="sf_782d07c16340f3f0646c8248">
+    <input type="email" name="email" class="signup-input" id="signup-email" placeholder="your@email.com" required>
     <button type="submit" class="btn signup-btn">Sign up</button>
+    <input type="text" name="honeypot" style="display:none">
   </form>
 </header>
 

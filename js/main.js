@@ -17,14 +17,13 @@ window.addEventListener('load', () => {
   if (heroText) setTimeout(() => heroText.classList.add('reveal'), 400);
 });
 
-document.getElementById('signup-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  document.getElementById('signup-email').value = '';
+document.getElementById('signup-form').addEventListener('submit', function (e) {
   document.getElementById('signup-modal').hidden = false;
 });
 
 document.getElementById('modal-close').addEventListener('click', function() {
   document.getElementById('signup-modal').hidden = true;
+  document.getElementById('signup-email').value = '';
 });
 
 function updateActiveNav() {
