@@ -145,6 +145,39 @@ body {
   transform: translateY(30px);
 }
 
+/* Sign up */
+.signup-section { text-align: center; padding-top: 0; }
+
+.signup-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.signup-input {
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: 1px solid var(--card);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 16px;
+  width: 280px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.signup-input:focus {
+  border-color: var(--accent);
+}
+
+.signup-btn {
+  margin-top: 0;
+  cursor: pointer;
+  border: none;
+}
+
 /* Footer */
 .footer {
   text-align: center;
