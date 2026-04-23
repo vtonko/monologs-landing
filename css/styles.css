@@ -52,6 +52,27 @@ body {
   box-sizing: border-box;
 }
 
+/* Nav */
+.site-nav {
+  display: flex;
+  gap: 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
 /* Hero */
 .hero {
   display: flex;
