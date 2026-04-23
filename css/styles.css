@@ -73,37 +73,61 @@ body {
   color: var(--text);
 }
 
-/* Hero */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 100vh;
-  position: relative;
+.site-nav a.active {
+  color: #B48F7D;
 }
 
-.hero::before {
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  opacity: 0;
+  transform: none;
+  transition: opacity 1s ease;
+  z-index: 0;
+}
+
+.hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 70% 40%, rgba(235,198,109,0.12), transparent 60%);
+  background: linear-gradient(to top, rgba(23,20,19,0.85) 30%, rgba(23,20,19,0.2) 100%);
+  z-index: 1;
   pointer-events: none;
 }
 
-.hero-text { max-width: 600px; }
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 60px;
+  opacity: 0;
+  transform: translateY(30px);
+}
 
 .hero h1 {
   font-size: 64px;
   margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(30px);
 }
 
 .hero p {
   font-size: 20px;
   color: var(--muted);
-  opacity: 0;
-  transform: translateY(30px);
 }
 
 /* Button */
