@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monologs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <span>MONOLOGS</span>
+  <nav class="site-nav">
+    <a href="#hero">Home</a>
+    <a href="#features">Features</a>
+    <a href="#how-it-works">Experience</a>
+  </nav>
+  <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+  <form class="signup-form" id="signup-form" action="https://api.staticforms.dev/submit" method="POST"
+    target="dummyframe">
+    <input type="hidden" name="apiKey" id="apiKey" value="e2b0dedf-dedc-489a-ac5e-46d748d65459">
+    <input type="email" name="email" class="signup-input" id="signup-email" placeholder="your@email.com" required>
+    <button type="submit" class="btn signup-btn">Sign up</button>
+    <input type="text" name="honeypot" style="display:none">
+  </form>
+</header>
+
+<div id="hero" class="hero">
+  <img class="hero-bg animate" src="assets/images/monologs.jpeg" alt="Monologs">
+  <div class="hero-text animate">
+    <h1 style="font-weight: 300;">Your film timeline fixed</h1>
+    <p>Introducing Monologs, the smart film photography tracker that remembers when and where you took your pictures.</p>
+    <a href="#how-it-works" class="btn">Tell me more</a>
+  </div>
+</div>
+
+<div id="features" class="container section">
+  <h2>Built for precision</h2>
+  <div class="grid">
+    <div class="card"> <h3>Timestamp Everything</h3><p>Capture exact timing for every shot.</p></div>
+    <div class="card"> <h3>Bluetooth Sync</h3><p>Instantly sync with your phone.</p></div>
+    <div class="card"> <h3>Smart Metadata</h3><p>Organize your analog workflow.</p></div>
+  </div>
+</div>
+
+<div id="how-it-works" class="container section">
+  <h2>How it works</h2>
+  <p>Film is a great way to remember what happened, but it does not know when. Your timeline shows when you scanned your shots, not when you actually took them.</p>
+  <p>That's why we're building Monologs, your smart film photography notebook. It knows exactly when you pressed the shutter and updates your scans. Stay tuned, and meanwhile, go take some photos.</p>
+  <p>Go take photos</p>
+</div>
+
+<div id="signup-modal" class="modal-overlay" hidden>
+  <div class="modal-box">
+    <p>Thank you for subscribing. Stay tuned!</p>
+    <button class="btn" id="modal-close">Close</button>
+  </div>
+</div>
+
+<div class="footer">© 2026 Monologs</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
