@@ -6,6 +6,11 @@
 <title>Monologs</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
+@font-face {
+  font-family: 'Microgramma';
+  src: url('microgrammanormal.ttf') format('truetype');
+  font-weight: normal;
+}
 :root {
   --bg: #0b0b0c;
   --card: #111;
@@ -125,18 +130,33 @@ img {
   .hero { flex-direction: column; text-align: center; }
   .grid, .steps { grid-template-columns: 1fr; }
 }
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  z-index: 100;
+  font-family: 'Microgramma', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.15em;
+  color: var(--text);
+  text-transform: uppercase;
+}
 </style>
 </head>
 <body>
 
+<header class="site-header">MONOLOGS</header>
+
 <div class="container hero">
   <div class="hero-text">
-    <h1 class="animate">I’m Monologs.</h1>
+    <h1 class="animate" style="font-weight: 300;">Film timeline<br>fixed</h1>
     <p class="animate">Every frame. Logged. Every moment. Remembered.</p>
     <a href="#" class="btn animate">Get Early Access</a>
   </div>
   <div>
-    <img class="animate" src="https://via.placeholder.com/400x500" alt="device">
+    <img class="animate" src="monologs.jpeg" alt="Monologs">
   </div>
 </div>
 
