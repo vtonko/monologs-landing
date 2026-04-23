@@ -9,7 +9,13 @@
 </head>
 <body>
 
-<header class="site-header">MONOLOGS</header>
+<header class="site-header">
+  <span>MONOLOGS</span>
+  <form class="signup-form" id="signup-form">
+    <input type="email" class="signup-input" id="signup-email" placeholder="your@email.com" required>
+    <button type="submit" class="btn signup-btn">Sign up</button>
+  </form>
+</header>
 
 <div class="container hero">
   <div class="hero-text">
@@ -36,15 +42,6 @@
   <p>Film is a great way to remember what happened, but it does not know when. Your timeline shows when you scanned your shots, not when you actually took them.</p>
   <p>That's why we're building Monologs, your smart film photography notebook. It knows exactly when you pressed the shutter and updates your scans. Stay tuned, and meanwhile, go take some photos.</p>
   <p>Go take photos</p>
-</div>
-
-<div class="container section signup-section">
-  <h2>Stay in the loop</h2>
-  <p>Be the first to know when Monologs launches.</p>
-  <form class="signup-form" id="signup-form">
-    <input type="email" class="signup-input" id="signup-email" placeholder="your@email.com" required>
-    <button type="submit" class="btn signup-btn">Sign up</button>
-  </form>
 </div>
 
 <div id="signup-modal" class="modal-overlay" hidden>
