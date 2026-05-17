@@ -9,23 +9,32 @@
 </head>
 <body>
 
-<header class="site-header">
-  <span>MONOLOGS</span>
-  <nav class="site-nav">
-    <a href="#hero">Home</a>
-    <a href="#how-it-works">Experience</a>
-    <a href="#features">Features</a>
-  </nav>
-  <div class="header-actions">
-    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-    <form class="signup-form" id="signup-form" action="https://api.staticforms.dev/submit" method="POST"
-      target="dummyframe">
+<div id="hero" class="hero">
+  <img class="hero-bg animate" src="assets/images/monologs.jpeg" alt="Monologs">
+  <header class="site-header">
+    <span>MONOLOGS</span>
+    <nav class="site-nav">
+      <a href="#hero">Home</a>
+      <a href="#how-it-works">Experience</a>
+      <a href="#features">Features</a>
+    </nav>
+  </header>
+  <div class="hero-text animate">
+    <h1 style="font-weight: 300;">Film memories deserve better than broken timelines.</h1>
+    <p>Monologs is a film frame logger that notes exactly when you take a photo. Then, it writes this data to your scans so you don't lose track of them.</p>
+    <a href="#how-it-works" class="btn">Tell me more</a>
+  </div>
+  <div class="hero-side">
+    <div class="hero-signup animate">
+      <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
       <p class="signup-cta-small">Be the first to know when we launch.</p>
-      <input type="hidden" name="apiKey" id="apiKey" value="e2b0dedf-dedc-489a-ac5e-46d748d65459">
-      <input type="email" name="email" class="signup-input" id="signup-email" placeholder="your@email.com" required>
-      <button type="submit" class="btn signup-btn">Join the Waitlist</button>
-      <input type="text" name="honeypot" style="display:none">
-    </form>
+      <form class="signup-form" id="signup-form" action="https://api.staticforms.dev/submit" method="POST" target="dummyframe">
+        <input type="hidden" name="apiKey" id="apiKey" value="e2b0dedf-dedc-489a-ac5e-46d748d65459">
+        <input type="email" name="email" class="signup-input" id="signup-email" placeholder="your@email.com" required>
+        <button type="submit" class="btn signup-btn">Join the Waitlist</button>
+        <input type="text" name="honeypot" style="display:none">
+      </form>
+    </div>
     <div class="video-frame-group">
       <div class="video-frame">
         <video class="motion-video-hero" autoplay muted loop playsinline>
@@ -38,15 +47,6 @@
         </video>
       </div>
     </div>
-  </div>
-</header>
-
-<div id="hero" class="hero">
-  <img class="hero-bg animate" src="assets/images/monologs.jpeg" alt="Monologs">
-  <div class="hero-text animate">
-    <h1 style="font-weight: 300;">Film memories deserve better than broken timelines.</h1>
-    <p>Monologs is a film frame logger that notes exactly when you take a photo. Then, it writes this data to your scans so you don't lose track of them</p>
-    <a href="#how-it-works" class="btn">Tell me more</a>
   </div>
 </div>
 
