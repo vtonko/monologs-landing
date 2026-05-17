@@ -157,7 +157,7 @@ body {
 }
 
 .video-frame:nth-child(2) {
-  transform: translateX(-3px);
+  transform: translateX(4px);
 }
 
 .video-frame::before,
