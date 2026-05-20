@@ -154,6 +154,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
+  width: 100%;
   max-width: 320px;
   padding: 18px 22px;
   background: rgba(255, 255, 255, 0.1);
@@ -203,15 +204,19 @@ body {
 .video-frame-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   margin-top: 4px;
+  width: 100%;
+  max-width: 320px;
+  min-height: 320px;
   z-index: 2;
 }
 
 .video-frame {
   position: relative;
-  width: 352px;
-  height: 198px;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
   padding: 12px;
   background: rgba(12, 12, 12, 0.96);
   border: 2px solid #1f1f1f;
@@ -224,13 +229,9 @@ body {
   align-items: center;
 }
 
-.video-frame:nth-child(1) {
-  transform: translateX(4px);
-}
-
+.video-frame:nth-child(1),
 .video-frame:nth-child(2) {
-  transform: translateX(4px);
-  height: 396px;
+  transform: none;
 }
 
 .video-frame::before,
@@ -252,13 +253,14 @@ body {
 }
 
 .motion-video-hero {
-  width: 100%;
+  width: auto;
   height: 100%;
   max-width: 100%;
   max-height: 100%;
   display: block;
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 .hero h1 {
