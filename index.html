@@ -31,6 +31,10 @@
       <form class="signup-form" id="signup-form" action="https://api.staticforms.dev/submit" method="POST" target="dummyframe">
         <input type="hidden" name="apiKey" id="apiKey" value="e2b0dedf-dedc-489a-ac5e-46d748d65459">
         <input type="email" name="email" class="signup-input" id="signup-email" placeholder="your@email.com" required>
+        <label class="signup-privacy">
+          <input type="checkbox" name="privacyConsent" required>
+          <span>I agree to receive updates about Monologs and understand that my data will be processed according to the <a href="privacy-policy.html">Privacy Policy</a>.</span>
+        </label>
         <button type="submit" class="btn signup-btn">Join the Waitlist</button>
         <input type="text" name="honeypot" style="display:none">
       </form>
@@ -72,6 +76,26 @@
   <div class="modal-box">
     <p>Thank you for subscribing. Stay tuned!</p>
     <button class="btn" id="modal-close">Close</button>
+  </div>
+</div>
+
+<div id="consent-modal" class="modal-overlay consent-overlay" aria-labelledby="consent-title" aria-modal="true" role="dialog" hidden>
+  <div class="modal-box consent-box">
+    <h2 id="consent-title">Your Privacy Is Important</h2>
+    <p>We use cookies on our site to analyze and enhance your experience, provide and improve our site, and to deliver content and ads that are relevant to you. You can choose Accept All Cookies, Necessary Cookies Only, or manage them individually by clicking Manage. Read more in our <a href="cookie-policy.html" target="_blank" rel="noopener">Monologs Cookie Policy</a> and <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+    <div class="consent-actions">
+      <button class="btn consent-accept" type="button">Accept All Cookies</button>
+      <button class="btn consent-reject" type="button">Necessary Cookies Only</button>
+      <button class="btn consent-manage" type="button">Manage Cookies</button>
+    </div>
+    <div class="consent-manage-panel" hidden>
+      <h3>Manage Cookies</h3>
+      <p>Choose which cookies you want to allow.</p>
+      <label><input type="checkbox" disabled checked> Necessary cookies</label>
+      <label><input type="checkbox" id="analytics-cookie"> Analytics cookies</label>
+      <label><input type="checkbox" id="ads-cookie"> Ads cookies</label>
+      <button class="btn consent-save" type="button">Save preferences</button>
+    </div>
   </div>
 </div>
 
