@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monologs — Workflow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 1. SETUP & CORE BOUNDARIES */
+        * { box-sizing: border-box; }
+        body {
+            background-color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #F8F5F2; /* Cream/Off-white tactile background */
+            color: #2D2D2D; /* Charcoal text */
+            display: flex;
+            flex-direction: column;
+            padding: 50px 70px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        /* 1.1 FILM GRAIN OVERLAY */
+        .slide-container::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/p6.png');
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* 1.2 BACKGROUND DECORATION - SUBTLE FILM EDGE */
+        .film-edge {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            opacity: 0.1;
+        }
+        .film-edge div {
+            width: 10px;
+            height: 20px;
+            background-color: #2D2D2D;
+            border-radius: 2px;
+        }
+
+        /* 2. TYPOGRAPHY */
+        h1, h2, h3 { 
+            font-family: 'Merriweather', serif; 
+            margin: 0; 
+            font-weight: 400;
+        }
+        p, span { 
+            font-family: 'Lato', sans-serif; 
+            font-size: 16px; 
+            line-height: 1.4;
+            color: #4A4A4A;
+        }
+
+        .header-section {
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        .slide-title {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #2D2D2D;
+        }
+
+        .slide-subtitle {
+            font-size: 22px;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            color: #A67C52; /* Muted tan accent */
+        }
+
+        /* 3. PRODUCT FLOW LAYOUT */
+        .flow-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        /* Continuous line (Film strip connector) */
+        .flow-line {
+            position: absolute;
+            top: 130px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: repeating-linear-gradient(90deg, #A67C52 0, #A67C52 8px, transparent 8px, transparent 16px);
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .flow-step {
+            width: 18%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 2;
+        }
+
+        /* Image per step */
+        .v1-image-crop {
+            width: 200px;
+            height: 240px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            mix-blend-mode: multiply;
+        }
+
+        .crop-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Typography per step */
+        .step-number {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 14px;
+            color: #A67C52;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .step-caption {
+            font-family: 'Merriweather', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #2D2D2D;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .step-detail {
+            font-size: 14px;
+            color: #666;
+            padding: 0 5px;
+        }
+
+        /* 4. BOTTOM FOOTER ROW */
+        .slide-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-top: 16px;
+        }
+
+        .slide-footer-label {
+            font-family: 'Lato', sans-serif;
+            font-size: 12px;
+            color: #D1D1D1;
+            letter-spacing: 2px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        <div class="film-edge">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+
+        <div class="header-section">
+            <h1 class="slide-title">Your film photos remember when they were taken</h1>
+            <h2 class="slide-subtitle">Monologs connects every analogue frame with its time, place and story.</h2>
+        </div>
+
+        <div class="flow-container">
+            <div class="flow-line"></div>
+
+            <div class="flow-step">
+                <div class="v1-image-crop">
+                    <img class="crop-img" src="assets/images/monologs.jpeg" alt="Attach Device">
+                </div>
+                <span class="step-number">01</span>
+                <h3 class="step-caption">Attach</h3>
+                <p class="step-detail">Attach Monologs to your film camera.</p>
+            </div>
+
+            <div class="flow-step">
+                <div class="v1-image-crop">
+                    <img class="crop-img" src="assets/images/built1.png" alt="Capture Frame">
+                </div>
+                <span class="step-number">02</span>
+                <h3 class="step-caption">Capture</h3>
+                <p class="step-detail">Take photos as usual. Each frame is logged automatically.</p>
+            </div>
+
+            <div class="flow-step">
+                <div class="v1-image-crop" style="display:flex;align-items:center;justify-content:center;background:#F0EBE5;">
+                    <svg width="180" height="200" viewBox="0 0 180 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Device (left) -->
+                        <rect x="12" y="60" width="44" height="80" rx="7" fill="#D9CFC7" stroke="#A67C52" stroke-width="1.5"/>
+                        <rect x="20" y="72" width="28" height="36" rx="3" fill="#F8F5F2"/>
+                        <!-- shutter button pressed -->
+                        <circle cx="34" cy="122" r="6" fill="#A67C52"/>
+                        <circle cx="34" cy="122" r="3.5" fill="#7A5038"/>
+                        <text x="34" y="68" text-anchor="middle" font-family="Lato,sans-serif" font-size="6" fill="#A67C52">LOG</text>
+
+                        <!-- Sync waves in the middle -->
+                        <path d="M70 100 Q80 88 90 100 Q100 112 110 100" stroke="#A67C52" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.9"/>
+                        <path d="M72 100 Q82 82 90 100 Q98 118 108 100" stroke="#A67C52" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.45"/>
+                        <!-- Arrow right -->
+                        <line x1="90" y1="100" x2="116" y2="100" stroke="#A67C52" stroke-width="1.5" stroke-dasharray="3 2"/>
+                        <polygon points="116,96 124,100 116,104" fill="#A67C52"/>
+
+                        <!-- Phone (right) -->
+                        <rect x="124" y="55" width="44" height="88" rx="7" fill="#D9CFC7" stroke="#A67C52" stroke-width="1.5"/>
+                        <rect x="132" y="66" width="28" height="48" rx="3" fill="#F8F5F2"/>
+                        <!-- phone notch -->
+                        <rect x="144" y="58" width="8" height="3" rx="1.5" fill="#A67C52" opacity="0.5"/>
+                        <!-- app content lines -->
+                        <line x1="136" y1="76" x2="156" y2="76" stroke="#A67C52" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+                        <line x1="136" y1="82" x2="150" y2="82" stroke="#A67C52" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
+                        <line x1="136" y1="88" x2="153" y2="88" stroke="#A67C52" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
+                        <!-- checkmark received -->
+                        <path d="M138 100 L143 106 L156 96" stroke="#A67C52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </div>
+                <span class="step-number">03</span>
+                <h3 class="step-caption">Sync</h3>
+                <p class="step-detail">Sync the recorded roll. Time, location and sequence transfer.</p>
+            </div>
+
+            <div class="flow-step">
+                <div class="v1-image-crop">
+                    <img class="crop-img" src="assets/images/timeline.png" alt="Add Scans">
+                </div>
+                <span class="step-number">04</span>
+                <h3 class="step-caption">Add scans</h3>
+                <p class="step-detail">Upload developed scans. Monologs matches images with frames.</p>
+            </div>
+
+            <div class="flow-step">
+                <div class="v1-image-crop">
+                    <img class="crop-img" src="assets/images/built.png" alt="Rediscover Story">
+                </div>
+                <span class="step-number">05</span>
+                <h3 class="step-caption">Rediscover</h3>
+                <p class="step-detail">Rediscover the story behind every single frame.</p>
+            </div>
+        </div>
+
+        <div class="slide-footer">
+            <span class="slide-footer-label">MONOLOGS / PRODUCT WORKFLOW</span>
+        </div>
+    </div>
+
+</body>
+</html>
